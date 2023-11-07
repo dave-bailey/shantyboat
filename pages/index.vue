@@ -5,9 +5,10 @@
 
 <style lang="scss" scoped>
 .resupply {
-
   &__title {
-    color: blue;
+    font-size: 2em;
+    padding: 1em;
+    text-align: center;
   }
 }
 
