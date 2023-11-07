@@ -11,6 +11,7 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
     itemName: '',
     servingSize: 0,
     caloriesPerServing: 0,
+    totalAddedCalories: 0,
   }),
   actions: {
     daysToCompleteSection() {
@@ -27,7 +28,9 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
       e.preventDefault();
       const itemToAdd = { itemName: this.itemName, servingSize: this.servingSize, caloriesPerServing: this.caloriesPerServing }
 
-      this.resupplyItemList.push(itemToAdd)
+      this.resupplyItemList.unshift(itemToAdd)
+      const caloriesToAdd = this.servingSize * this.caloriesPerServing
+      this.totalAddedCalories = this.totalAddedCalories + caloriesToAdd
 
       this.itemName = ''
       this.servingSize = 0
