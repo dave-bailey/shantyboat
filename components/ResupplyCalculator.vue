@@ -4,7 +4,6 @@ import { useResupplyCalculatorStore } from '../store/useResupplyCalculatorStore'
 const store = useResupplyCalculatorStore()
 </script>
 
-
 <template>
   <div class="resupply-calculator">
     <div class="resupply-calculator__left-container">
@@ -39,5 +38,4 @@ const store = useResupplyCalculatorStore()
     padding: 2em;
   }
 }
-
 </style>

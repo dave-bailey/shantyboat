@@ -2,7 +2,6 @@
 import { useResupplyCalculatorStore } from '../store/useResupplyCalculatorStore';
 
 const store = useResupplyCalculatorStore()
-
 </script>
 
 <template>

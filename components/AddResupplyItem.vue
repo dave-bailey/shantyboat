@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useResupplyCalculatorStore } from '../store/useResupplyCalculatorStore';
 const store = useResupplyCalculatorStore()
-
 </script>
 
 <template>
