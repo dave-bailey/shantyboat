@@ -14,6 +14,7 @@ const store = useResupplyCalculatorStore()
       </div>
     
       <total-days-and-calories />
+      <daily-food-list />
     </div>
     <add-resupply-item />
   </div>
