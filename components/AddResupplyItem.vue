@@ -18,7 +18,10 @@ const store = useResupplyCalculatorStore()
       </li>
       </ul>
     </div>
-    <form class="add-item__form-container" v-on:submit="store.addItemToResupplyList">
+    <form
+      v-if="store.caloriesUntilNextResupply !== 0"
+      class="add-item__form-container" 
+      v-on:submit="store.addItemToResupplyList">
       <label>Items Name
         <input
           type="text"
@@ -40,25 +43,47 @@ const store = useResupplyCalculatorStore()
       </label>
       <button >Add Item</button>
     </form>
+    <div v-else>
+      Add Your Calorie Needs and Mileage to Add Items To Your List
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .add-item {
-  border: 2px solid red;
+  border: 2px solid black;
+  border-radius: .5em;
   display: flex;
   flex-direction: column;
   padding: 2em;
+
+  &__remaining-calories {
+    font-size: 1.5em;
+  }
 
   &__form-container {
     display: flex;
     flex-direction: column;
     padding: 2em;
   }
+
+  &__list-item {
+    padding: 1em 0;
+  }
 }
 
 input {
   margin: .8em;
   width: 20em;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  max-height: 20em;
+}
+
+li {
+  list-style: none;
 }
 </style>
