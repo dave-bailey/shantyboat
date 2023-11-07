@@ -7,6 +7,9 @@ const store = useResupplyCalculatorStore()
 <template>
   <div class="add-item">
     <div v-if="store.resupplyItemList.length > 0">
+      <div class="add-item__remaining-calories">
+        Total Calories Remaining: {{ store.totalCaloriesRemaining }}
+      </div>
       <ul>
         <li v-for="(item, index) in store.resupplyItemList" v-bind:key="index">      
         Item Name: {{ item.itemName }}<br>

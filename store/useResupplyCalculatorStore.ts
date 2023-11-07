@@ -37,6 +37,9 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
       this.servingSize = 0
       this.caloriesPerServing = 0
     }
+  },
+  getters: {
+    totalCaloriesRemaining: (state) => state.caloriesUntilNextResupply - state.totalAddedCalories
   }
 })
 
