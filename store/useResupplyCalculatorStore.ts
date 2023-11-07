@@ -36,6 +36,9 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
       this.itemName = ''
       this.servingSize = 0
       this.caloriesPerServing = 0
+    },
+    removeResupplyItem(index: number) {
+      this.resupplyItemList.splice(index, 1)
     }
   },
   getters: {

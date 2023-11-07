@@ -17,6 +17,7 @@ const store = useResupplyCalculatorStore()
           Calories Per Serving: {{ item.caloriesPerServing }}<br>
           Total Calories: {{ item.caloriesPerServing * item.servingSize }}<br>
           Servings Per Day: {{  item.servingSize / store.daysUntilNextResupply }}
+          <button @click="store.removeResupplyItem(index)">X</button>
         </li>
       </ul>
     </div>
