@@ -9,4 +9,5 @@ const store = useResupplyCalculatorStore()
   Days Until Next Resupply {{  store.daysUntilNextResupply }}<br>
   Caloric Need for Section {{ store.caloriesUntilNextResupply }}<br>
   <total-days-and-calories />
+  <add-resupply-item />
 </template>

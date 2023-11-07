@@ -7,6 +7,10 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
     totalMileageUntilResupply: 0,
     daysUntilNextResupply: 0,
     caloriesUntilNextResupply: 0,
+    resupplyItemList: [],
+    itemName: '',
+    servingSize: 0,
+    caloriesPerServing: 0,
   }),
   actions: {
     daysToCompleteSection() {
@@ -19,13 +23,15 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
     caloriesPerSection() {
       this.caloriesUntilNextResupply = this.dailyCalories * this.daysUntilNextResupply
     },
+    addItemToResupplyList(e) {
+      e.preventDefault();
+      const itemToAdd = { itemName: this.itemName, servingSize: this.servingSize, caloriesPerServing: this.caloriesPerServing }
+
+      this.resupplyItemList.push(itemToAdd)
+
+      this.itemName = ''
+      this.servingSize = 0
+      this.caloriesPerServing = 0
+    }
   }
 })
-
-
-
-
-const daysToCompleteSection = () => {
-
-}
-
