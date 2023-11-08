@@ -12,7 +12,7 @@ const store = useResupplyCalculatorStore()
       <ul>
         <li class="add-item__list-item" v-for="(item, index) in store.resupplyItemList" v-bind:key="index">      
           Item Name: {{ item.itemName }}<br>
-          Serving Size: {{ item.servingSize }}<br>
+          Number of Servings: {{ item.servingSize }}<br>
           Calories Per Serving: {{ item.caloriesPerServing }}<br>
           Total Calories: {{ item.caloriesPerServing * item.servingSize }}<br>
           Servings Per Day: {{  item.servingSize / store.daysUntilNextResupply }}
@@ -31,7 +31,7 @@ const store = useResupplyCalculatorStore()
         />  
       </label>
   
-      <label>Serving Size
+      <label>Number of Servings
         <input
           type="text"
           v-model="store.servingSize"
