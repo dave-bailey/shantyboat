@@ -38,4 +38,11 @@ const store = useResupplyCalculatorStore()
     padding: 2em;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .resupply-calculator {
+    flex-direction: column;
+  }
+
+}
 </style>
