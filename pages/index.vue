@@ -1,14 +1,12 @@
 <template>
-  <div class="resupply__title">Resupply Calculator</div>
-  <resupply-calculator />
+  <div class="home">Home Page</div>
+  <NuxtLink to="/resupply-calculator">Resupply Calculator</NuxtLink>
 </template>
 
 <style lang="scss" scoped>
-.resupply {
-  &__title {
-    font-size: 2em;
-    padding: 1em;
-    text-align: center;
-  }
+.home {
+  font-size: 2em;
+  padding: 1em;
+  text-align: center;
 }
 </style>
