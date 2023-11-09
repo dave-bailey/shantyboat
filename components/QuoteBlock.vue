@@ -41,6 +41,11 @@
       text-decoration: underline;
     }
 
+    &-resume:hover {
+      color: $secondary-accent;
+      cursor: pointer;
+    }
+
     &-text {
       text-align: left;
       font-weight: 300;
