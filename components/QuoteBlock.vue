@@ -1,18 +1,18 @@
 <template>  
   <section class="home-page__quote-block">
-  <img class="home-page__quote-block-img" src="~/assets/img/azt.jpeg" />
-  <div class="home-page__quote-block-container">
-    <a class="home-page__quote-block-resume">
-      MY<br>RESUME
-    </a>
-    <div class="home-page__quote-block-text">
-      <p>
-        “We partook of the enthusiasm of explorers<br>whom an undreamed-of discovery was being revealed.”
-      </p>
-      <p> - Harlan Hubbard, Shantyboat</p>
-  </div>
-  </div>
-</section>
+    <img class="home-page__quote-block-img" src="~/assets/img/azt.jpeg" />
+    <div class="home-page__quote-block-container">
+      <a class="home-page__quote-block-resume">
+        MY<br>RESUME
+      </a>
+      <div class="home-page__quote-block-text">
+        <p>
+          “We partook of the enthusiasm of explorers<br>whom an undreamed-of discovery was being revealed.”
+        </p>
+        <p> - Harlan Hubbard, Shantyboat</p>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
