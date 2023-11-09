@@ -183,17 +183,19 @@
       color: $primary-font;
       font-size: 2em;
       font-weight: 600;
-      line-height: 80%;
+      line-height: 99%;
       margin: 0;
       padding: 1em 1em .5em 1em;
       text-align: left;
+      text-decoration: underline;
     }
 
     &-text {
-      text-align: right;
+      text-align: left;
       font-weight: 300;
       background-color: $background;
-      padding: 5em;
+      padding: 2em;
+      width: 80%;
     }
 
     &-img {
@@ -239,6 +241,10 @@
         padding: 0 2em;
       }
     }
+
+    &__quote-block-text {
+      padding: 1em;
+    }
   }
 }
 
@@ -248,6 +254,22 @@
       &__img-container {
         height: 20em;
         width: 100%;
+      }
+    }
+
+    &__quote-block {
+      
+      &-container {
+        width: 100%;
+      }
+      
+      &-img {
+        display: none;
+        height: 20em;
+      }
+
+      &-resume {
+        padding: .5em 1em;
       }
     }
   }
