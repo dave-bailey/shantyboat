@@ -1,10 +1,7 @@
 <template>
   <section class="hero__container">
     <section class="hero__left">
-      <div>  
-        <h1 class="hero__left-header">DAVE<br>BAILEY</h1>
-        <h3 class="hero__left-subheader">building<br>and hiking.</h3>
-      </div>
+      <logo />
       <div class="hero__social-container">
         <a href="https://www.linkedin.com/in/dave-andrew-bailey/">
           <img class="hero__social-icon" src="~assets/img/LI.png">
@@ -45,24 +42,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
-      &-header {
-        color: $primary-font;
-        font-size: 2em;
-        font-weight: 600;
-        line-height: 80%;
-        margin: 0;
-        padding: 1em 1em .5em 1em;
-        text-align: left;
-      }
-
-      &-subheader {
-        font-size: 1em;
-        font-weight: 300;
-        margin: 0;
-        padding: 1em 2em;
-        text-align: left;
-      }
     }
 
     &__right {
