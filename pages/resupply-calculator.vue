@@ -30,8 +30,12 @@
   font-size: 1em;
   font-weight: 300;
   margin: 0;
-  padding: 2em;
+  padding: 2em 2em 2em 8em;
   text-align: left;
+}
+
+.home-link:hover {
+  color: $secondary-accent;
 }
 
 @media screen and (max-width: 525px) {
