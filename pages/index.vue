@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
-    <hero />
-    <quote-block />
+    <home-hero />
+    <home-quote-block />
     <section class="home-page__grand-adventures">
       THOSE<br>GRAND ADVENTURES<br><br>
 
