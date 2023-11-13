@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@sidebase/nuxt-pdf',
   ],
   vite: {
     css: {
