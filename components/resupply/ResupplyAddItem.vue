@@ -52,7 +52,7 @@ const store = useResupplyCalculatorStore()
     </form>
     <div class="add-items__zero-state" v-else>
       <p>
-        Total your calories and mileage<br>to add items to your list.
+        Total your calories and mileage<br>to add items to your resupply list.
       </p>  
     </div>
   </div>
@@ -61,8 +61,7 @@ const store = useResupplyCalculatorStore()
 <style lang="scss" scoped>
 .add-items {
   align-items: flex-start;
-  border: .2em solid black;
-  border-radius: .5em;
+  background-color: white;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -70,6 +69,8 @@ const store = useResupplyCalculatorStore()
   justify-content: space-between;
   padding: 2em;
   width: 22em;
+  height: 100%;
+  margin: 0 0 2em 0;
   
   &__remaining-calories {
     font-size: 1.5em;
@@ -83,7 +84,23 @@ const store = useResupplyCalculatorStore()
   }
 
   &__list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1em 0;
+  }
+
+  &__remove-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    color: $primary-font;
+    border-radius: 50%;
+    padding: 1em;
+    height: 1em;
+    width: 1em;
+    margin: 0 1em 0 0;
   }
 
   &__zero-state {

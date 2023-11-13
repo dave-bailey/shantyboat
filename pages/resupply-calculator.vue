@@ -25,8 +25,13 @@
     font-weight: 600;
     line-height: 80%;
     margin: 0;
-    padding: 1em 1em .5em 1em;
+    padding: .65em 1em .5em 1em;
     text-align: right;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__container {
@@ -39,8 +44,9 @@
 
   &__footer {
     background-color: $background;
-    height: 5em;
+    height: 8em;
     width: 100%;
+    margin: 2em 0 0 0;
   }
 }
 
@@ -49,7 +55,7 @@
   font-size: 1em;
   font-weight: 300;
   margin: 0;
-  padding: 2em 2em 2em 8em;
+  padding: 2em 2em 2em 10em;
   text-align: left;
 }
 
@@ -57,14 +63,34 @@
   color: $secondary-accent;
 }
 
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 800px) {
+
   .resupply {
     &__top-bar {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
     }
+
+      &__title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
       &__title {
-      padding: .5em 1em;
+      padding: .5em 1em 0 0;
+    }
+  }
+  .home-link {
+    padding: 0 3em 1em 0;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .resupply {
+      &__title {
+        font-size: 1.75em;
+        padding: 1.1em .75em 0 0;
     }
   }
 }

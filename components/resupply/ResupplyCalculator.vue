@@ -6,11 +6,13 @@ const store = useResupplyCalculatorStore()
 
 <template>
   <div class="resupply-calculator">
-    <div class="resupply-calculator__left-container">
-      <resupply-days-and-calories />
-      <resupply-daily-food-list />
-    </div>
-    <div class="resupply-calculator__right-container">
+    <div class="resupply-calculator__container">
+      <div class="resupply-calculator__left-container">
+        <resupply-days-and-calories />
+        <div class="resupply-calculator__food-list">
+          <resupply-daily-food-list />
+        </div>
+      </div>
       <resupply-add-item />
     </div>
   </div>
@@ -21,16 +23,25 @@ const store = useResupplyCalculatorStore()
   display: flex;
   justify-content: center;
   margin-bottom: 2em;
-  padding-top: 1em;
+  padding-top: 1.5em;
+  flex-direction: column;
   
   &__left-container {
-    border: .2em solid $primary-font;
-    border-radius: .5em;
     display: flex;
     flex-direction: column;
     margin-right: 2em;
     width: 22em;
     box-sizing: border-box;
+  }
+
+  &__food-list {
+    display: flex;
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -39,6 +50,10 @@ const store = useResupplyCalculatorStore()
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &__container {
+      flex-direction: column;
+    }
 
     &__left-container {
       margin: 0 0 2em 0;
