@@ -7,8 +7,8 @@ const store = useResupplyCalculatorStore()
 <template>
   <div class="days-calories">
     <div class="days-calories__totals">
-      <div>Total Calories: {{ store.caloriesUntilNextResupply.toFixed(2) }}</div>
-      <div>Number of Days: {{  store.daysUntilNextResupply.toFixed(2) }}</div> 
+      <div>Total Calories: {{ store.caloriesUntilNextResupply.toFixed(0) }}</div>
+      <div>Number of Days: {{  store.daysUntilNextResupply.toFixed(1) }}</div> 
     </div>
     <div class="input-container">
       <label>Calories Per Day</label>

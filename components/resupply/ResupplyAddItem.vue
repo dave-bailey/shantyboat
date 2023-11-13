@@ -7,18 +7,20 @@ const store = useResupplyCalculatorStore()
   <div class="add-items">
     <div v-if="store.caloriesUntilNextResupply !== 0">
       <div class="add-items__remaining-calories">
-        Calories Remaining: {{ store.totalCaloriesRemaining.toFixed(2) }}
+        Calories Remaining: {{ store.totalCaloriesRemaining.toFixed(0) }}
       </div>
       <ul>
-        <li class="add-items__list-item" v-for="(item, index) in store.resupplyItemList" v-bind:key="index">      
+      <li class="add-items__list-item" v-for="(item, index) in store.resupplyItemList" v-bind:key="index">
+        <div>
           Item Name: {{ item.itemName }}<br>
           Number of Servings: {{ item.servingSize }}<br>
           Calories Per Serving: {{ item.caloriesPerServing }}<br>
           Total Calories: {{ item.caloriesPerServing * item.servingSize }}<br>
-          Servings Per Day: {{  item.servingSize / store.daysUntilNextResupply }}
-          <button @click="store.removeResupplyItem(index)">X</button>
-        </li>
-      </ul>
+          Servings Per Day: {{  (item.servingSize / store.daysUntilNextResupply).toFixed(1) }}
+        </div>    
+        <button class="add-items__remove-list-item" @click="store.removeResupplyItem(index)">X</button>
+      </li>
+    </ul>
     </div>
     <form
       v-if="store.caloriesUntilNextResupply !== 0"
