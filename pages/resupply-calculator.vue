@@ -1,10 +1,15 @@
 <template>
   <div class="resupply__top-bar">
     <logo />
-    <h1 class="resupply__title">RESUPPLY<br>CALCULATOR</h1>
-    <NuxtLink class="home-link" to="/">home</NuxtLink>
+    <div class="resupply__title-container">
+      <h1 class="resupply__title">RESUPPLY<br>CALCULATOR</h1>
+      <NuxtLink class="home-link" to="/">home</NuxtLink>
+    </div>
   </div>
-  <resupply-calculator />
+  <div class="resupply__container">
+    <resupply-calculator />
+  </div>
+  <div class="resupply__footer"></div>
 </template>
 
 <style lang="scss" scoped>
@@ -22,6 +27,20 @@
     margin: 0;
     padding: 1em 1em .5em 1em;
     text-align: right;
+  }
+
+  &__container {
+    background-image: url(~/assets/img/sierra.jpeg);
+    min-height: 40em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  };
+
+  &__footer {
+    background-color: $background;
+    height: 5em;
+    width: 100%;
   }
 }
 
