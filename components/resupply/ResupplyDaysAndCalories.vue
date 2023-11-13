@@ -45,6 +45,7 @@ const store = useResupplyCalculatorStore()
 <style lang="scss" scoped>
 .days-calories {
   background-color: white;
+  border: .2em solid $background;
   display: flex;
   align-items: flex-start;
   flex-direction: column;

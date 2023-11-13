@@ -9,14 +9,16 @@ const pdfSection = ref<HTMLElement | null>(null)
 </script>
 
 <template>
-  <div ref="pdfSection" class="daily-food-list" v-if="store.resupplyItemList.length > 0">
-    <div class="daily-food-list__title">Daily Food List</div>
-    <ul >
-      <li v-for="(item, index) in store.resupplyItemList" v-bind:key="index">
-        {{ item.itemName }}: {{  (item.servingSize / store.daysUntilNextResupply).toFixed(1) }} Servings
-      </li>
-    </ul>
-    <button @click="exportToPDF('my-resupply-list.pdf', pdfSection)">
+  <div class="daily-food-list" v-if="store.resupplyItemList.length > 0">
+    <div ref="pdfSection">
+      <div class="daily-food-list__title">Daily Food List</div>
+      <ul >
+        <li v-for="(item, index) in store.resupplyItemList" v-bind:key="index">
+          {{ item.itemName }}: {{  (item.servingSize / store.daysUntilNextResupply).toFixed(1) }} Servings
+        </li>
+      </ul>
+    </div>
+    <button class="daily-food-list__download-button" @click="exportToPDF('my-resupply-list.pdf', pdfSection)">
       Download as PDF
     </button>
   </div>
@@ -25,9 +27,10 @@ const pdfSection = ref<HTMLElement | null>(null)
 <style lang="scss" scoped>
 .daily-food-list {
   background: white;
+  border: .2em solid $background;
   display: flex;
   flex-direction: column;
-  margin: 2em 0;
+  margin: 2em 0 0 0;
   padding: 2em;
   box-sizing: border-box;
   width: 100%;
@@ -36,6 +39,33 @@ const pdfSection = ref<HTMLElement | null>(null)
     font-weight: 300;
     font-size: 1.5em;
   }
+
+  &__download-button {
+    width: 70%;
+    background-color: $background;
+    border: none;
+    border-radius: .2em;
+    color: $primary-font;
+    cursor: pointer;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 300;
+  }
+
+  &__download-button:hover {
+    background-color: $primary-accent;
+  }
+
+  &__download-button:active {
+    background-color: $background;
+  }
+}
+
+uL {
+  max-height: 10em;
+  overflow: auto;
 }
 
 li {

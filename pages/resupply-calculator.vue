@@ -1,19 +1,27 @@
 <template>
-  <div class="resupply__top-bar">
-    <logo />
-    <div class="resupply__title-container">
-      <h1 class="resupply__title">RESUPPLY<br>CALCULATOR</h1>
-      <NuxtLink class="home-link" to="/">home</NuxtLink>
+  <div class="resupply">
+    <div class="resupply__top-bar">
+      <logo />
+      <div class="resupply__title-container">
+        <h1 class="resupply__title">RESUPPLY<br>CALCULATOR</h1>
+        <NuxtLink class="home-link" to="/">home</NuxtLink>
+      </div>
     </div>
+    <div class="resupply__container">
+      <resupply-calculator />
+    </div>
+    <div class="resupply__grow-container"></div>
+    <div class="resupply__footer">Copyright © 2023: Dave Bailey - All Rights Reserved</div>
   </div>
-  <div class="resupply__container">
-    <resupply-calculator />
-  </div>
-  <div class="resupply__footer"></div>
 </template>
 
 <style lang="scss" scoped>
 .resupply {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   &__top-bar {
     display: flex;
     justify-content: space-between;
@@ -36,13 +44,21 @@
 
   &__container {
     background-image: url(~/assets/img/sierra.jpeg);
-    min-height: 40em;
     background-attachment: fixed;
-    background-position: center;
+    background-position:  top;
     background-repeat: no-repeat;
   };
 
+  &__grow-container {
+    flex-grow: 1;
+  }
+
   &__footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .75em;
     background-color: $background;
     height: 8em;
     width: 100%;
@@ -64,7 +80,6 @@
 }
 
 @media screen and (max-width: 800px) {
-
   .resupply {
     &__top-bar {
       display: flex;
@@ -94,5 +109,4 @@
     }
   }
 }
-
 </style>

@@ -61,6 +61,7 @@ const store = useResupplyCalculatorStore()
 <style lang="scss" scoped>
 .add-items {
   align-items: flex-start;
+  border: .2em solid $background;
   background-color: white;
   box-sizing: border-box;
   display: flex;
@@ -70,7 +71,6 @@ const store = useResupplyCalculatorStore()
   padding: 2em;
   width: 22em;
   height: 100%;
-  margin: 0 0 2em 0;
   
   &__remaining-calories {
     font-size: 1.5em;
@@ -84,6 +84,7 @@ const store = useResupplyCalculatorStore()
   }
 
   &__list-item {
+    border-bottom: .2em solid $background;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,7 +134,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: auto;
-  max-height: 20em;
+  max-height: 25em;
 }
 
 li {
