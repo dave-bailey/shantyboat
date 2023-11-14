@@ -1,5 +1,8 @@
 <template>
-  <logo />
+  <div class="top-bar">
+    <logo />
+    <NuxtLink class="home-link" to="/">home</NuxtLink>
+  </div>
   <div class="pack-calculator__container">
     <div class="pack-calculator__content">
       <h1 class="pack-calculator__title">PACK<br>CALCULATOR</h1>
@@ -49,6 +52,23 @@
       width: 100%;
     }
   }
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.home-link {
+  color: $primary-font;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0;
+  padding: 2em 2em 2em 10em;
+  text-align: left;
+}
+
+.home-link:hover {
+  color: $secondary-accent;
 }
 
 @media screen and (max-width: 800px) {
