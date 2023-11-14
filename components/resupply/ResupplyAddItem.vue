@@ -56,7 +56,10 @@ const store = useResupplyCalculatorStore()
           v-model="store.caloriesPerServing"
         />
       </div>
-      <button >Add Item</button>
+      <div class="add-items__button-container">
+        <div class="add-items__error" v-if="store.allInputsRequired">* All inputs are required.</div>
+        <button>Add Item</button>
+      </div>
     </form>
     <div class="add-items__zero-state" v-else>
       <p>
@@ -68,7 +71,6 @@ const store = useResupplyCalculatorStore()
 
 <style lang="scss" scoped>
 .add-items {
-  align-items: flex-start;
   border: .2em solid $background;
   background-color: white;
   box-sizing: border-box;
@@ -79,14 +81,13 @@ const store = useResupplyCalculatorStore()
   padding: 2em;
   width: 22em;
   height: 100%;
-  max-height: 52em;
+  max-height: 55em;
   
   &__remaining-calories {
     font-size: 1.5em;
   }
 
   &__form-container {
-    align-items: flex-end;
     display: flex;
     flex-direction: column;
     padding-top: 2em;
@@ -113,6 +114,12 @@ const store = useResupplyCalculatorStore()
     margin: 0 1em 0 0;
   }
 
+  &__button-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
   &__zero-state {
     align-items: center;
     display: flex;
@@ -130,7 +137,12 @@ const store = useResupplyCalculatorStore()
     border-bottom: .2em solid $background;
     margin-bottom: .5em;
     font-weight: 600
-  };
+  }
+
+  &__error {
+    color: red;
+    padding-bottom: 2em;
+  }
 }
 
 input {

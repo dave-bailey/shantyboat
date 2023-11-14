@@ -13,6 +13,7 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
     caloriesPerServing: 0,
     totalAddedCalories: 0,
     addInputNumber: false,
+    allInputsRequired: false,
   }),
   actions: {
     daysToCompleteSection() {
@@ -37,6 +38,13 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
     },
     addItemToResupplyList(e: any) {
       e.preventDefault();
+
+      if (this.itemName === '' || this.servingSize === 0 || this.caloriesPerServing === 0) {
+
+        return this.allInputsRequired = true
+      }
+
+      this.allInputsRequired = false
       
       const itemToAdd = { itemName: this.itemName, servingSize: this.servingSize, caloriesPerServing: this.caloriesPerServing }
 
