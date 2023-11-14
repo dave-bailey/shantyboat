@@ -51,7 +51,7 @@
       justify-content: space-between;
 
       &-bottom-container {
-        padding-right: 2em;
+        padding: 0 2.9em;
       }
     }
 
@@ -125,7 +125,7 @@
 
     &__resume {
       color: $primary-font;
-      font-size: 1.5em;
+      font-size: 1.2em;
       font-weight: 600;
       line-height: 99%;
       margin: 0;
@@ -154,7 +154,7 @@
         padding: 0 0 1em 0;
 
         &-bottom-container {
-          padding-bottom: 1em;
+          padding: 0 2em 1em 0;
         }
       }
 
@@ -165,6 +165,7 @@
 
       &__resume {
         text-align: right;
+        padding-top: 1em;
       }
 
       &__right {

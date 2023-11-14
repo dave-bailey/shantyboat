@@ -15,7 +15,7 @@
     font-weight: 600;
     line-height: 80%;
     margin: 0;
-    padding: 1em 1em .5em 1em;
+    padding: 1em 1em 0 1em;
     text-align: left;
   }
 
