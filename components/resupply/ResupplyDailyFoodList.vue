@@ -63,11 +63,6 @@ const pdfSection = ref<HTMLElement | null>(null)
   }
 }
 
-uL {
-  max-height: 10em;
-  overflow: auto;
-}
-
 li {
   list-style: number;
 }

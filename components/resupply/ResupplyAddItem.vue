@@ -79,6 +79,7 @@ const store = useResupplyCalculatorStore()
   padding: 2em;
   width: 22em;
   height: 100%;
+  max-height: 52em;
   
   &__remaining-calories {
     font-size: 1.5em;
