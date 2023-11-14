@@ -63,7 +63,7 @@
   font-size: 1em;
   font-weight: 300;
   margin: 0;
-  padding: 2em 2em 2em 10em;
+  padding: 2em 2em 0 0;
   text-align: left;
 }
 

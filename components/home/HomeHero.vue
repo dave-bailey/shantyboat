@@ -51,7 +51,7 @@
       justify-content: space-between;
 
       &-bottom-container {
-        padding-right: 2.2em;
+        padding-right: 2em;
       }
     }
 
@@ -103,7 +103,7 @@
       font-weight: 600;
       line-height: 95%;
       margin: 0;
-      padding: 16px 32px 0 32px;
+      padding: 1em 1.66em 0 0;
       text-align: right;
     }
 
