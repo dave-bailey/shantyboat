@@ -18,7 +18,12 @@ const store = useResupplyCalculatorStore()
           Total Calories: {{ item.caloriesPerServing * item.servingSize }}<br>
           Servings Per Day: {{  (item.servingSize / store.daysUntilNextResupply).toFixed(1) }}
         </div>    
-        <button class="add-items__remove-list-item" @click="store.removeResupplyItem(index)">X</button>
+        <button
+          class="add-items__remove-list-item"
+          @click="store.removeResupplyItem(index, item.caloriesPerServing * item.servingSize)"
+        >
+          X
+        </button>
       </li>
     </ul>
     </div>
@@ -37,14 +42,14 @@ const store = useResupplyCalculatorStore()
       <div class="input-container">
         <label>Number of Servings</label>
         <input
-          type="text"
+          type="number"
           v-model="store.servingSize"
         /> 
       </div>
       <div class="input-container">
         <label>Calories Per Serving</label>
         <input
-          type="text"
+          type="number"
           v-model="store.caloriesPerServing"
         />
       </div>

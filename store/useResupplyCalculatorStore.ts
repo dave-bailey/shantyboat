@@ -44,7 +44,9 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
       this.servingSize = 0
       this.caloriesPerServing = 0
     },
-    removeResupplyItem(index: number) {
+    removeResupplyItem(index: number, calories: number) {
+      this.totalAddedCalories = this.totalAddedCalories - calories
+
       this.resupplyItemList.splice(index, 1)
     }
   },
