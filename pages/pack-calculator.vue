@@ -24,7 +24,7 @@
 
   &__img {
     background-image: url(~/assets/img/iceland.jpeg);
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
     height: 40em;
@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 2em;
+    padding: 0 2em;
 
     p {
       text-align: right;
