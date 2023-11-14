@@ -14,7 +14,7 @@
         </a>
       </div>
     </section>
-    <div class="hero__img-container"></div>
+    <div class="hero__img-container" alt="Hiking on the CDT"></div>
     <section class="hero__right">
       <h2 class="hero__right-subheader">software engineer<br>graphic designer<br>thru-hiker</h2>
       <div class="hero__app-links-container">

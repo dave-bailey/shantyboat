@@ -10,7 +10,7 @@
       coming soon...
       </p>
     </div>
-      <div class="pack-calculator__img"></div>
+      <div class="pack-calculator__img" alt="Hiking in Iceland"></div>
   </div>
 </template>
 

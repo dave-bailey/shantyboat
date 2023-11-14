@@ -7,7 +7,7 @@
         <NuxtLink class="home-link" to="/">home</NuxtLink>
       </div>
     </div>
-    <div class="resupply__container">
+    <div class="resupply__container" alt="Sierra Nevada mountains">
       <resupply-calculator />
     </div>
     <div class="resupply__grow-container"></div>
