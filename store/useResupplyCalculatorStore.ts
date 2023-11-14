@@ -20,7 +20,7 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
         return this.addInputNumber = true
       }
 
-      if (this.totalMileageUntilResupply === 0 || this.dailyMileage === 0 || this.totalMileageUntilResupply) return
+      if (this.totalMileageUntilResupply === 0 || this.dailyMileage === 0 || this.totalMileageUntilResupply === 0) return
 
       this.daysUntilNextResupply = +this.totalMileageUntilResupply / +this.dailyMileage
     
