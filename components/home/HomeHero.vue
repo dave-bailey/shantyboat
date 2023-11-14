@@ -2,16 +2,18 @@
   <section class="hero__container">
     <section class="hero__left">
       <logo />
-      <div class="hero__social-container">
-        <a href="https://www.linkedin.com/in/dave-andrew-bailey/">
-          <img class="hero__social-icon" src="~assets/img/LI.png">
-        </a>
-        <a href="https://github.com/dave-bailey">
-          <img class="hero__social-icon" src="~assets/img/GH.png">
-        </a>
-        <a href="https://trail2dev.hashnode.dev/">
-          <img class="hero__social-icon" src="~assets/img/HN.png">
-        </a>
+      <div class="hero__left-bottom-container">
+        <div class="hero__social-container">          
+          <a href="https://www.linkedin.com/in/dave-andrew-bailey/">
+            <img class="hero__social-icon" src="~assets/img/LI.png">
+          </a>
+          <a href="https://github.com/dave-bailey">
+            <img class="hero__social-icon" src="~assets/img/GH.png">
+          </a>
+          <a href="https://trail2dev.hashnode.dev/">
+            <img class="hero__social-icon" src="~assets/img/HN.png">
+          </a>
+        </div>
         <div class="hero__resume">
           <a>
             MY<br>RESUME
@@ -47,6 +49,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      &-bottom-container {
+        padding-right: 2.2em;
+      }
     }
 
     &__right {
@@ -59,7 +65,7 @@
         font-size: 1em;
         font-weight: 300;
         margin: 0;
-        padding: 1em 2em;
+        padding: 2em;
         text-align: right;
         white-space: nowrap;
       }
@@ -68,7 +74,6 @@
     &__social-container {
       display: flex;
       flex-direction: column;
-      padding-right: 2.2em;
       display: flex;
       justify-content: flex-end;
     }
@@ -139,7 +144,6 @@
 @media screen and (max-width: 1024px) {
   .home-page {
     .hero {
-    
       &__container {
         display: flex;
         flex-direction: column;
@@ -148,6 +152,19 @@
       &__left {
         flex-direction: row;
         padding: 0 0 1em 0;
+
+        &-bottom-container {
+          padding-bottom: 1em;
+        }
+      }
+
+      &__social-container {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &__resume {
+        text-align: right;
       }
 
       &__right {
@@ -156,6 +173,8 @@
         width: 100%;
 
         &-subheader {
+          display: flex;
+          align-items: center;
           text-align: left;
         }
       }
@@ -165,8 +184,14 @@
         width: 100%;
       }
 
-      &__app-links-subheader {
-        padding: 0 2em;
+      &__app-links {
+        &-container {
+          max-width: 12em;
+        }
+        
+        &-subheader {
+          padding: 0 2em;
+        }
       }
     }
   }
