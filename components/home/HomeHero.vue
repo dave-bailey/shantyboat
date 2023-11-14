@@ -176,6 +176,7 @@
           display: flex;
           align-items: center;
           text-align: left;
+          padding-right: 0;
         }
       }
 
