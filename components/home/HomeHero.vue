@@ -77,7 +77,7 @@
 
     &__img-container {
       background-image: url(~/assets/img/dave_hiking_the_cdt.jpeg);
-      background-position: right;
+      background-position: center;
       background-repeat: no-repeat no-repeat;
       background-size: auto 100%;
       height: 40em;
