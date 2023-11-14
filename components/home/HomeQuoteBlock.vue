@@ -80,6 +80,7 @@
       
       &-container {
         width: 100%;
+        flex-direction: row;
       }
       
       &-img {
