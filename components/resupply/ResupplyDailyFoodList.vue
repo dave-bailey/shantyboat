@@ -19,7 +19,7 @@ const pdfSection = ref<HTMLElement | null>(null)
       </ul>
     </div>
     <button class="daily-food-list__download-button" @click="exportToPDF('my-resupply-list.pdf', pdfSection)">
-      Download as PDF
+      Download List
     </button>
   </div>
 </template>
@@ -41,13 +41,13 @@ const pdfSection = ref<HTMLElement | null>(null)
   }
 
   &__download-button {
-    width: 70%;
+    width: 50%;
     background-color: $background;
     border: none;
     border-radius: .2em;
     color: $primary-font;
     cursor: pointer;
-    padding: 1em 2em;
+    padding: 1em;
     text-align: center;
     text-decoration: none;
     font-size: 1em;
