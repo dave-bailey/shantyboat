@@ -10,35 +10,35 @@ const store = useResupplyCalculatorStore()
       <div>Total Calories: {{ store.caloriesUntilNextResupply.toFixed(0) }}</div>
       <div>Number of Days: {{  store.daysUntilNextResupply.toFixed(1) }}</div> 
     </div>
-    <div class="input-container">
+    <div class="days-calories__input-container">
       <label>Calories Per Day</label>
       <input 
         type="number"
         v-model.number="store.dailyCalories"
-        placeholder="Add Your Daily Calories"
         required
       />
     </div>
-    <div class="input-container">
+    <div class="days-calories__input-container">
       <label>Miles Per Day</label>
       <input
         type="number"
         v-model.number="store.dailyMileage"
-        placeholder="Add Your Daily Mileage"
         required
       />
     </div>
-    <div class="input-container">
+    <div class="days-calories__input-container">
       <label>Mileage Until Next Resupply</label>
       <input
       type="number"
       v-model.number="store.totalMileageUntilResupply"
-      placeholder="Add Your Total Mileage For This Section"
       required
       />
     </div>
-    <button @click="store.daysToCompleteSection()">SUBMIT</button>
-    <!-- <button>CLEAR</button> -->
+    <div class="days-calories__error" v-if="store.addInputNumber">* Numbers are required to submit.</div>
+    <div class="days-calories__button-container">
+      <button @click="store.daysToCompleteSection()">SUBMIT</button>
+      <button @click="store.$reset()">CLEAR</button>
+    </div>
   </div>
 </template>
 
@@ -59,12 +59,23 @@ const store = useResupplyCalculatorStore()
     font-weight: 300;
     padding: 1.5em 0 ;
   }
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__error {
+    color: red;
+    padding-bottom: 2em;
+  }
 }
 
-.input-container {
-  display: flex;
-  flex-direction: column;
-}
 
 input {
   border: none;

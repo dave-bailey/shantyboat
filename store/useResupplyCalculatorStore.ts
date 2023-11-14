@@ -12,12 +12,17 @@ export const useResupplyCalculatorStore = defineStore('resupplyCalculator', {
     servingSize: 0,
     caloriesPerServing: 0,
     totalAddedCalories: 0,
+    addInputNumber: false,
   }),
   actions: {
     daysToCompleteSection() {
-      if (this.totalMileageUntilResupply === 0 || this.dailyMileage === 0) return
+      if (this.dailyCalories === '' || this.dailyMileage === '' || this.totalMileageUntilResupply === '') {
+        return this.addInputNumber = true
+      }
 
-      this.daysUntilNextResupply = this.totalMileageUntilResupply / this.dailyMileage
+      if (this.totalMileageUntilResupply === 0 || this.dailyMileage === 0 || this.totalMileageUntilResupply) return
+
+      this.daysUntilNextResupply = +this.totalMileageUntilResupply / +this.dailyMileage
     
       this.caloriesPerSection()
     },
