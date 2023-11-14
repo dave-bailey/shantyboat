@@ -12,6 +12,11 @@
         <a href="https://trail2dev.hashnode.dev/">
           <img class="hero__social-icon" src="~assets/img/HN.png">
         </a>
+        <div class="hero__resume">
+          <a>
+            MY<br>RESUME
+          </a>
+      </div>
       </div>
     </section>
     <div class="hero__img-container" alt="Hiking on the CDT"></div>
@@ -63,7 +68,9 @@
     &__social-container {
       display: flex;
       flex-direction: column;
-      padding-right: 2em;
+      padding-right: 2.2em;
+      display: flex;
+      justify-content: flex-end;
     }
 
     &__social-icon {
@@ -109,6 +116,22 @@
       margin: 0;
       padding: 1em 2em 0 1em;
       text-align: right;
+    }
+
+    &__resume {
+      color: $primary-font;
+      font-size: 1.5em;
+      font-weight: 600;
+      line-height: 99%;
+      margin: 0;
+      padding: 1em 0 0 0;
+      text-align: left;
+      text-decoration: underline;
+    }
+
+    &__resume:hover {
+      color: $secondary-accent;
+      cursor: pointer;
     }
   }
 }
