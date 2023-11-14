@@ -6,6 +6,9 @@ const store = useResupplyCalculatorStore()
 <template>
   <div class="add-items">
     <div v-if="store.caloriesUntilNextResupply !== 0">
+      <div class="add-items__hit-the-trail" v-if="store.totalCaloriesRemaining <= 0">
+        TIME TO HIT THE TRAIL!
+      </div>
       <div class="add-items__remaining-calories">
         Calories Remaining: {{ store.totalCaloriesRemaining.toFixed(0) }}
       </div>
@@ -120,6 +123,13 @@ const store = useResupplyCalculatorStore()
     padding-bottom: .5em;
     border-bottom: .2em solid $background;
   }
+
+  &__hit-the-trail {
+    font-size: 1.5em;
+    border-bottom: .2em solid $background;
+    margin-bottom: .5em;
+    font-weight: 600
+  };
 }
 
 input {
