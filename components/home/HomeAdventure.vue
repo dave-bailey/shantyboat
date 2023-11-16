@@ -67,6 +67,10 @@ const imgUrl = new URL(`../../assets/img/${props.titleImage}`, import.meta.url).
   }
 }
 
+.adventure-tile:hover {
+  transform: scale(1.01);
+}
+
 .overlay {
   display: flex;
   justify-content: center;
