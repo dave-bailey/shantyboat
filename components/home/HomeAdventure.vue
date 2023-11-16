@@ -11,14 +11,19 @@ const props = defineProps({
 
 const showOverlay = ref(false)
 
-const imgUrl = new URL(`../../assets/img/${props.titleImage}`, import.meta.url).href
+const imageUrl = ref('')
 
+watchEffect(async () => {
+    imageUrl.value = await import(
+      `../../public/img/${props.titleImage}.jpeg`
+    ).then((lib) => lib.default || lib);
+});
 </script>
 
 <template>
   <section>
     <div class="adventure-tile" @click="showOverlay = true">
-      <img class="adventure-tile__img" :src="imgUrl">
+      <img class="adventure-tile__img" :src="imageUrl">
       <div class="adventure-tile__title-container">
         <h4 class="adventure-tile__title">{{ props.title.toUpperCase() }}</h4>
         <p class="adventure-tile__description">{{ props.description }}</p>
