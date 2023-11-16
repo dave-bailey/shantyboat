@@ -1,29 +1,85 @@
+<script setup>
+import { adventureData } from '~/assets/adventureData';
+
+</script>
+
 <template>
   <div class="home-page">
     <home-hero />
-    <home-quote-block />
     <section class="home-page__grand-adventures">
-      THOSE<br>GRAND ADVENTURES<br><br>
-
-      Appalachian Trail<br>
-      Continental Divide Trail<br>
-      Pacific Crest Trail<br><br>
-      Long Trail<br>
-      Colorado Trail<br>
-      John Muir Trail<br><br>
-      Arizona Trail<br>
-      Camino De Santiago<br>
-      Laugavegur and Fimmvörðuháls Trails<br><br>
-      New Hampshire 4,000 Footers<br>
-      South Beyond 6,000 Footers<br>
-      Colorado 14ers<br>
-
+      <h3 class="home-page__grand-adventures-title">GRAND<br>ADVENTURES</h3>
+      <ul >
+        <li v-for="item in adventureData">        
+          <home-adventure 
+            :title="item?.title"
+            :description="item?.description"
+            :title-image="item?.titleImg"
+            :copy="item?.copy"
+          />
+        </li>
+      </ul>
     </section>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .home-page {
-  border: none;
+  &__grand-adventures {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      font-size: 3em;
+      font-weight: 600;
+      line-height: 85%
+    }
+  };
+}
+
+ul {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 25em 25em 25em;
+  list-style: none;
+  padding: 0;
+  column-gap: 1em;
+  row-gap: 1em;
+
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  ul {
+    grid-template-columns: 20em 20em 20em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  ul {
+    grid-template-columns: 25em 25em;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  ul {
+    grid-template-columns: 20em 20em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  ul {
+    grid-template-columns: 25em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  ul {
+    grid-template-columns: 20em;
+  }
 }
 </style>
