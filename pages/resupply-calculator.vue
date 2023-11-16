@@ -43,7 +43,7 @@
   }
 
   &__container {
-    background-image: url(~/assets/img/sierra.jpeg);
+    background-image: url(~/public/img/sierra.jpeg);
     background-attachment: fixed;
     background-position:  top;
     background-repeat: no-repeat;

@@ -5,13 +5,13 @@
       <div class="hero__left-bottom-container">
         <div class="hero__social-container">          
           <a href="https://www.linkedin.com/in/dave-andrew-bailey/">
-            <img class="hero__social-icon" src="~assets/img/LI.png">
+            <img class="hero__social-icon" src="~public/img/LI.png">
           </a>
           <a href="https://github.com/dave-bailey">
-            <img class="hero__social-icon" src="~assets/img/GH.png">
+            <img class="hero__social-icon" src="~public/img/GH.png">
           </a>
           <a href="https://trail2dev.hashnode.dev/">
-            <img class="hero__social-icon" src="~assets/img/HN.png">
+            <img class="hero__social-icon" src="~public/img/HN.png">
           </a>
         </div>
         <div class="hero__resume">
@@ -88,7 +88,7 @@
     }
 
     &__img-container {
-      background-image: url(~/assets/img/dave_hiking_the_cdt.jpeg);
+      background-image: url(~/public/img/dave_hiking_the_cdt.jpeg);
       background-position: center;
       background-repeat: no-repeat no-repeat;
       background-size: auto 100%;

@@ -23,7 +23,7 @@
   }
 
   &__img {
-    background-image: url(~/assets/img/iceland.jpeg);
+    background-image: url(~/public/img/iceland.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
