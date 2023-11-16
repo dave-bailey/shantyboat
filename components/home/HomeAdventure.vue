@@ -1,5 +1,4 @@
 <script setup>
-
 const props = defineProps({
   title: String,
   description: String,
@@ -43,32 +42,32 @@ watchEffect(async () => {
 
 <style lang="scss">
 .adventure-tile {
-  border: .1em solid $background;
+  align-items: center;
   background-color: white;
+  border: .1em solid $background;
+  box-shadow: .5em .5em .5em $background;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: .5em .5em .5em $background;
 
   &__img {
     width: 100%;
   }
 
   &__title-container {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    display: flex;
     height: 8em;
+    justify-content: space-around;
     width: 90%;
   }
 
   &__title {
-    width: 40%;
     font-size: 1.2em;
-    margin: 1em 0;
     font-weight: 600;
     line-height: 90%;
+    margin: 1em 0;
+    width: 40%;
   }
 }
 
@@ -77,25 +76,25 @@ watchEffect(async () => {
 }
 
 .overlay {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: rgba(0,0,0,0.5);
-  z-index: 2;
+  bottom: 0;
   cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 
   &__container {
+    align-items: flex-start;
+    background-color: $background;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 75%;
-    background-color: $background;
   }
 
   &__top-bar {
@@ -108,8 +107,8 @@ watchEffect(async () => {
 @media screen and (max-width: 1300px) {
   .adventure-tile {
     &__description {
-      width: 35%;
       text-align: right;
+      width: 35%;
     }
   }
 }
@@ -117,8 +116,8 @@ watchEffect(async () => {
 @media screen and (max-width: 875px) {
   .adventure-tile {
     &__description {
-      width: 35%;
       text-align: right;
+      width: 35%;
     }
   }
 }
@@ -126,8 +125,8 @@ watchEffect(async () => {
 @media screen and (max-width: 700px) {
   .adventure-tile {
     &__description {
-      width: 35%;
       text-align: right;
+      width: 35%;
     }
   }
 }
@@ -135,8 +134,8 @@ watchEffect(async () => {
 @media screen and (max-width: 425px) {
   .adventure-tile {
     &__description {
-      width: 35%;
       text-align: right;
+      width: 35%;
     }
   }
 }

@@ -12,11 +12,11 @@ const pdfSection = ref<HTMLElement | null>(null)
   <div class="daily-food-list" v-if="store.resupplyItemList.length > 0">
     <div ref="pdfSection">
       <div class="daily-food-list__title">Daily Food List</div>
-      <ul >
-        <li v-for="(item, index) in store.resupplyItemList" v-bind:key="index">
-          {{ item.itemName }}: {{  (item.servingSize / store.daysUntilNextResupply).toFixed(1) }} Servings
-        </li>
-      </ul>
+        <ul >
+          <li v-for="(item, index) in store.resupplyItemList" v-bind:key="index">
+            {{ item.itemName }}: {{  (item.servingSize / store.daysUntilNextResupply).toFixed(1) }} Servings
+          </li>
+        </ul>
     </div>
     <button class="daily-food-list__download-button" @click="exportToPDF('my-resupply-list.pdf', pdfSection)">
       Download List
@@ -28,20 +28,19 @@ const pdfSection = ref<HTMLElement | null>(null)
 .daily-food-list {
   background: white;
   border: .2em solid $background;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   margin: 2em 0 0 0;
   padding: 2em;
-  box-sizing: border-box;
   width: 100%;
   
   &__title {
-    font-weight: 300;
     font-size: 1.5em;
+    font-weight: 300;
   }
 
   &__download-button {
-    width: 50%;
     background-color: $background;
     border: none;
     border-radius: .2em;
@@ -52,6 +51,7 @@ const pdfSection = ref<HTMLElement | null>(null)
     text-decoration: none;
     font-size: 1em;
     font-weight: 300;
+    width: 50%;
   }
 
   &__download-button:hover {

@@ -17,10 +17,10 @@
 
 <style lang="scss" scoped>
 .resupply {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
 
   &__top-bar {
     display: flex;
@@ -43,8 +43,8 @@
   }
 
   &__container {
-    background-image: url(~/public/img/sierra.jpeg);
     background-attachment: fixed;
+    background-image: url(~/public/img/sierra.jpeg);
     background-position:  top;
     background-repeat: no-repeat;
   };
@@ -54,15 +54,13 @@
   }
 
   &__footer {
-    margin-top: auto;
+    align-items: center;
+    background-color: $background;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-size: .75em;
-    background-color: $background;
     height: 8em;
     width: 100%;
-    margin: 2em 0 0 0;
   }
 }
 

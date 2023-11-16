@@ -1,6 +1,5 @@
 <script setup>
 import { adventureData } from '~/assets/adventureData';
-
 </script>
 
 <template>
@@ -26,9 +25,9 @@ import { adventureData } from '~/assets/adventureData';
 .home-page {
   &__grand-adventures {
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     display: flex;
-    flex-direction: column;
 
     &-title {
       font-size: 3em;
@@ -39,18 +38,18 @@ import { adventureData } from '~/assets/adventureData';
 }
 
 ul {
-  width: 90%;
+  align-items: center;
+  align-content: space-evenly;
+  column-gap: 1em;
   display: grid;
   grid-template-columns: 25em 25em 25em;
-  list-style: none;
-  padding: 0;
-  column-gap: 1em;
-  row-gap: 1em;
-
   justify-content: space-evenly;
   justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  row-gap: 1em;
+  width: 90%;
 }
 
 @media screen and (max-width: 1300px) {

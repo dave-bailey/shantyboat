@@ -34,11 +34,8 @@
 </template>
 
 <style lang="scss" scoped>
-
 .home-page {
-
   .hero {
-
     &__container {
       display: flex;
       justify-content: center;

@@ -13,22 +13,22 @@ const store = useResupplyCalculatorStore()
         Calories Remaining: {{ store.totalCaloriesRemaining.toFixed(0) }}
       </div>
       <ul>
-      <li class="add-items__list-item" v-for="(item, index) in store.resupplyItemList" v-bind:key="index">
-        <div>
-          Item Name: {{ item.itemName }}<br>
-          Number of Servings: {{ item.servingSize }}<br>
-          Calories Per Serving: {{ item.caloriesPerServing }}<br>
-          Total Calories: {{ item.caloriesPerServing * item.servingSize }}<br>
-          Servings Per Day: {{  (item.servingSize / store.daysUntilNextResupply).toFixed(1) }}
-        </div>    
-        <button
-          class="add-items__remove-list-item"
-          @click="store.removeResupplyItem(index, item.caloriesPerServing * item.servingSize)"
-        >
-          X
-        </button>
-      </li>
-    </ul>
+        <li class="add-items__list-item" v-for="(item, index) in store.resupplyItemList" v-bind:key="index">
+          <div>
+            Item Name: {{ item.itemName }}<br>
+            Number of Servings: {{ item.servingSize }}<br>
+            Calories Per Serving: {{ item.caloriesPerServing }}<br>
+            Total Calories: {{ item.caloriesPerServing * item.servingSize }}<br>
+            Servings Per Day: {{  (item.servingSize / store.daysUntilNextResupply).toFixed(1) }}
+          </div>    
+          <button
+            class="add-items__remove-list-item"
+            @click="store.removeResupplyItem(index, item.caloriesPerServing * item.servingSize)"
+          >
+            X
+          </button>
+        </li>
+      </ul>
     </div>
     <form
       v-if="store.caloriesUntilNextResupply !== 0"
@@ -77,11 +77,11 @@ const store = useResupplyCalculatorStore()
   display: flex;
   flex-direction: column;
   font-weight: 300;
+  height: 100%;
   justify-content: space-between;
+  max-height: 55em;
   padding: 2em;
   width: 22em;
-  height: 100%;
-  max-height: 55em;
   
   &__remaining-calories {
     font-size: 1.5em;
@@ -94,49 +94,49 @@ const store = useResupplyCalculatorStore()
   }
 
   &__list-item {
+    align-items: center;
     border-bottom: .2em solid $background;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1em 0;
   }
 
   &__remove-list-item {
-    display: flex;
-    justify-content: center;
     align-items: center;
     background-color: $background;
-    color: $primary-font;
     border-radius: 50%;
-    padding: 1em;
+    color: $primary-font;
+    display: flex;
     height: 1em;
-    width: 1em;
+    justify-content: center;
     margin: 0 1em 0 0;
+    padding: 1em;
+    width: 1em;
   }
 
   &__button-container {
-    display: flex;
     align-items: flex-end;
+    display: flex;
     flex-direction: column;
   }
 
   &__zero-state {
     align-items: center;
     display: flex;
-    height: 100%;
     font-weight: 300;
+    height: 100%;
     padding-bottom: 12em;
   }
   p {
-    padding-bottom: .5em;
     border-bottom: .2em solid $background;
+    padding-bottom: .5em;
   }
 
   &__hit-the-trail {
-    font-size: 1.5em;
     border-bottom: .2em solid $background;
+    font-size: 1.5em;
+    font-weight: 600;
     margin-bottom: .5em;
-    font-weight: 600
   }
 
   &__error {
@@ -149,8 +149,8 @@ input {
   border: none;
   border-bottom: .2em solid $background;
   font-size: 1em;
-  padding: .3em;
   margin-bottom: 2em;
+  padding: .3em;
   width: 15em;
 }
 
@@ -160,9 +160,9 @@ label {
 
 ul {
   margin: 0;
-  padding: 0;
-  overflow: auto;
   max-height: 25em;
+  overflow: auto;
+  padding: 0;
 }
 
 li {
@@ -180,11 +180,11 @@ button {
   border-radius: .2em;
   color: white;
   cursor: pointer;
+  font-size: 1em;
+  font-weight: 300;
   padding: 1em 2em;
   text-align: center;
   text-decoration: none;
-  font-size: 1em;
-  font-weight: 300;
 }
 
 button:hover {

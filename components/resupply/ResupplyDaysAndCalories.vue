@@ -44,10 +44,10 @@ const store = useResupplyCalculatorStore()
 
 <style lang="scss" scoped>
 .days-calories {
+  align-items: flex-start;
   background-color: white;
   border: .2em solid $background;
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
   font-weight: 300;
   padding: 0 2em 2em 2em;
@@ -110,5 +110,4 @@ button:hover {
 button:active {
   background-color: $background;
 }
-
 </style>
