@@ -11,7 +11,7 @@
       <resupply-calculator />
     </div>
     <div class="resupply__grow-container"></div>
-    <div class="resupply__footer">Copyright © 2023: Dave Bailey - All Rights Reserved</div>
+    <page-footer />
   </div>
 </template>
 
@@ -51,16 +51,6 @@
 
   &__grow-container {
     flex-grow: 1;
-  }
-
-  &__footer {
-    align-items: center;
-    background-color: $background;
-    display: flex;
-    justify-content: center;
-    font-size: .75em;
-    height: 8em;
-    width: 100%;
   }
 }
 

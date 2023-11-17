@@ -18,6 +18,7 @@ import { adventureData } from '~/assets/adventureData';
         </li>
       </ul>
     </section>
+    <page-footer />
   </div>
 </template>
 
@@ -25,9 +26,10 @@ import { adventureData } from '~/assets/adventureData';
 .home-page {
   &__grand-adventures {
     align-items: center;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    display: flex;
+    padding-bottom: 2em;
 
     &-title {
       font-size: 3em;

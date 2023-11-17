@@ -10,8 +10,9 @@
       coming soon...
       </p>
     </div>
-      <div class="pack-calculator__img" alt="Hiking in Iceland"></div>
+    <div class="pack-calculator__img" alt="Hiking in Iceland"></div>
   </div>
+  <page-footer />
 </template>
 
 <style lang="scss" scoped>
@@ -19,6 +20,7 @@
   &__container {
     display: flex;
     justify-content: center;
+    padding-bottom: 2em;
     text-align: center;
   }
 
