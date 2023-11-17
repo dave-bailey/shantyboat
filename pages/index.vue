@@ -10,10 +10,11 @@ import { adventureData } from '~/assets/adventureData';
       <ul >
         <li v-for="item in adventureData">        
           <home-adventure 
-            :title="item?.title"
-            :description="item?.description"
-            :title-image="item?.titleImg"
-            :copy="item?.copy"
+            :title="item.title"
+            :description="item.description"
+            :title-image="item.titleImg"
+            :copy="item.copy"
+            :subheader="item.subheader"
           />
         </li>
       </ul>

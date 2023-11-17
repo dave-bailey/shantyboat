@@ -3,7 +3,7 @@ const props = defineProps({
   title: String,
   description: String,
   titleImage: String,
-  alt: String,
+  subheader: String,
   copy: String,
   backgroundImage: String,
 })
@@ -31,10 +31,15 @@ watchEffect(async () => {
     <div class="overlay" v-if="showOverlay">
       <div class="overlay__container">
         <div class="overlay__top-bar">
-          <h2>{{ props.title }}</h2>
           <button @click="showOverlay = false">X</button>
         </div>
-        <p>{{ props.copy }}</p>
+        <div class="overlay__content">
+          <div>
+            <h2 class="overlay__content-title">{{ props.title.toUpperCase() }}</h2>
+            <h4 class="overlay__content-subheader">{{ props.subheader }}</h4>
+          </div>
+          <p  class="overlay__content-body" v-html="props.copy"></p>
+        </div>
       </div>
     </div>
   </section>
@@ -78,9 +83,7 @@ watchEffect(async () => {
 .overlay {
   background-color: rgba(0,0,0,0.5);
   bottom: 0;
-  cursor: pointer;
   display: flex;
-  height: 100%;
   justify-content: center;
   left: 0;
   position: fixed;
@@ -89,9 +92,20 @@ watchEffect(async () => {
   width: 100%;
   z-index: 2;
 
+  button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+
   &__container {
-    align-items: flex-start;
-    background-color: $background;
+    align-items: center;
+    background-color: white;
     display: flex;
     flex-direction: column;
     width: 75%;
@@ -99,8 +113,34 @@ watchEffect(async () => {
 
   &__top-bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 2em 8em  0 0;
     width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    width: 80%;
+
+    &-title {
+      font-size: 4em;
+      line-height: 80%;
+      margin-bottom: 0;
+      padding-top: 1em;
+    }
+
+    &-subheader {
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+
+    &-body {
+      line-height: 2em;
+      overflow: auto;
+      padding: 1em 1em 2em 4em;
+    }
   }
 }
 
@@ -111,31 +151,28 @@ watchEffect(async () => {
       width: 35%;
     }
   }
-}
+  .overlay {
+    &__content {
+        flex-direction: column;
 
-@media screen and (max-width: 875px) {
-  .adventure-tile {
-    &__description {
-      text-align: right;
-      width: 35%;
+        &-body {
+          border-top: .2em solid $background;
+          padding: 2em 0 0 0;
+        }
     }
   }
 }
 
 @media screen and (max-width: 700px) {
-  .adventure-tile {
-    &__description {
-      text-align: right;
-      width: 35%;
+  .overlay {
+    &__container {
+      width: 90%;
     }
-  }
-}
 
-@media screen and (max-width: 425px) {
-  .adventure-tile {
-    &__description {
-      text-align: right;
-      width: 35%;
+    &__content {
+        &-title {
+        font-size: 2em;
+      }
     }
   }
 }
