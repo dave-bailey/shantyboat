@@ -174,6 +174,10 @@ watchEffect(async () => {
         font-size: 2em;
       }
     }
+
+    &__top-bar {
+    padding: 2em 4em 0 0;
+    }
   }
 }
 </style>
