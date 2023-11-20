@@ -108,13 +108,14 @@ watchEffect(async () => {
     background-color: white;
     display: flex;
     flex-direction: column;
+    padding-bottom: 2em;
     width: 75%;
   }
 
   &__top-bar {
     display: flex;
     justify-content: flex-end;
-    padding: 2em 8em  0 0;
+    padding: 2em 4em  0 0;
     width: 100%;
   }
 
@@ -176,7 +177,7 @@ watchEffect(async () => {
     }
 
     &__top-bar {
-    padding: 2em 4em 0 0;
+    padding: 2em 2em 0 0;
     }
   }
 }
