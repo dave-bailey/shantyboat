@@ -1,75 +1,11 @@
-# Nuxt 3 Minimal Starter
+This is my portfolio site: showcasing my hiking accomplishments and hiking related applications.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+You can visit the live site [here](https://dave-bailey.dev/).
 
-## Setup
+Resupply Calculator:
+- An app for finding the sweat spot between too much and not enough food. 
 
-Make sure to install the dependencies:
+- A way to calculate duration and calorie needs for hiking trips and total daily food lists.
 
-```bash
-# npm
-npm install
+<img src='./public/img/resupply-calculator.png' alt='resupply-calculator'/>
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
