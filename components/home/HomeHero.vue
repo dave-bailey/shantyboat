@@ -14,11 +14,9 @@
             <img class="hero__social-icon" src="~public/img/HN.png">
           </a>
         </div>
-        <div class="hero__resume">
-          <a href="/Dave_Bailey_Resume_SE.pdf" target="_blank">
-            MY<br>RESUME
-          </a>
-      </div>
+        <a class="hero__resume" href="/Dave_Bailey_Resume_SE.pdf" target="_blank">
+          MY<br>RESUME
+        </a>
       </div>
     </section>
     <div class="hero__img-container" alt="Hiking on the CDT"></div>
@@ -121,6 +119,7 @@
     }
 
     &__resume {
+      color: $primary-font;
       font-size: 1.2em;
       font-weight: 600;
       line-height: 99%;
@@ -128,10 +127,6 @@
       padding: 1em 0 0 0;
       text-align: left;
       text-decoration: underline;
-
-      a {
-        color: $primary-font;
-      }
     }
 
     &__resume:hover {
