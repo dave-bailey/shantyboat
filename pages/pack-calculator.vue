@@ -1,3 +1,16 @@
+<script setup>
+const title = ref('DB: PACK CALCULATOR')
+const description = ref('A Hiker Pack Calculator')
+
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+</script>
+
 <template>
   <div class="top-bar">
     <logo />

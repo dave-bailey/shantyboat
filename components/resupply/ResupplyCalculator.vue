@@ -1,3 +1,16 @@
+<script setup>
+const title = ref('DB: RESUPPLY CALCULATOR')
+const description = ref('A Hiker Resupply Calculator')
+
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+</script>
+
 <template>
   <div class="resupply-calculator">
     <div class="resupply-calculator__container">
