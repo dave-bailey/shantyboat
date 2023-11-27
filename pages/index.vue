@@ -1,16 +1,5 @@
 <script setup>
 import { adventureData } from '~/assets/adventureData';
-
-const title = ref('DAVE BAILEY')
-const description = ref('Software Engineer & Hiker')
-
-useHead({
-  title,
-  meta: [{
-    name: 'description',
-    content: description
-  }]
-})
 </script>
 
 <template>
