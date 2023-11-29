@@ -7,7 +7,10 @@ useHead({
   meta: [{
     name: 'description',
     content: description
-  }]
+  }],
+  htmlAttrs: {
+    lang: 'en',
+  }
 })
 </script>
 
