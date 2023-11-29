@@ -4,13 +4,13 @@
       <logo />
       <div class="hero__left-bottom-container">
         <div class="hero__social-container">          
-          <a href="https://www.linkedin.com/in/dave-andrew-bailey/">
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/in/dave-andrew-bailey/">
             <img class="hero__social-icon" src="~public/img/LI.png">
           </a>
-          <a href="https://github.com/dave-bailey">
+          <a aria-label="Github" href="https://github.com/dave-bailey">
             <img class="hero__social-icon" src="~public/img/GH.png">
           </a>
-          <a href="https://trail2dev.hashnode.dev/">
+          <a aria-label="Hashnode Blog" href="https://trail2dev.hashnode.dev/">
             <img class="hero__social-icon" src="~public/img/HN.png">
           </a>
         </div>
