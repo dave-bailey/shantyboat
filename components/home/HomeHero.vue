@@ -5,13 +5,13 @@
       <div class="hero__left-bottom-container">
         <div class="hero__social-container">          
           <a aria-label="LinkedIn" href="https://www.linkedin.com/in/dave-andrew-bailey/">
-            <img class="hero__social-icon" src="~public/img/LI.png">
+            <img class="hero__social-icon" src="~public/img/LI.png" alt="LinkedIn logo">
           </a>
           <a aria-label="Github" href="https://github.com/dave-bailey">
-            <img class="hero__social-icon" src="~public/img/GH.png">
+            <img class="hero__social-icon" src="~public/img/GH.png" alt="Github logo">
           </a>
           <a aria-label="Hashnode Blog" href="https://trail2dev.hashnode.dev/">
-            <img class="hero__social-icon" src="~public/img/HN.png">
+            <img class="hero__social-icon" src="~public/img/HN.png" alt="Hashnode logo">
           </a>
         </div>
         <a class="hero__resume" href="/Dave_Bailey_Resume_SE.pdf" target="_blank">
