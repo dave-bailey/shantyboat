@@ -22,7 +22,7 @@ watchEffect(async () => {
 <template>
   <section>
     <div class="adventure-tile" @click="showOverlay = true">
-      <img class="adventure-tile__img" :src="imageUrl" :alt="props.title">
+      <img class="adventure-tile__img" :src="imageUrl" alt="hiking picture">
       <div class="adventure-tile__title-container">
         <h4 class="adventure-tile__title">{{ props.title.toUpperCase() }}</h4>
         <p class="adventure-tile__description">{{ props.description }}</p>
