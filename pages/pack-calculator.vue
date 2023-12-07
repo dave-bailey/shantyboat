@@ -1,4 +1,7 @@
-<script setup>
+<script setup lang="ts">
+import { usePackCalculatorStore } from '../store/usePackCalculatorStore';
+const store = usePackCalculatorStore()
+
 const title = ref('DB: PACK CALCULATOR')
 const description = ref('A Hiker Pack Calculator')
 
@@ -17,7 +20,10 @@ useHead({
     <NuxtLink class="home-link" to="/">home</NuxtLink>
   </div>
   <div class="pack-calculator__container">
-    <div class="pack-calculator__content">
+    <div v-if="store.enabled">
+      <h1 class="pack-calculator__title">PACK<br>CALCULATOR</h1>
+    </div>
+    <div v-else class="pack-calculator__content">
       <h1 class="pack-calculator__title">PACK<br>CALCULATOR</h1>
       <p>
       coming soon...
