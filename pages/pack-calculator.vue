@@ -22,6 +22,29 @@ useHead({
   <div class="pack-calculator__container">
     <div v-if="store.enabled">
       <h1 class="pack-calculator__title">PACK<br>CALCULATOR</h1>
+      <form class="pack-calculator__form-container">
+        <label for="pc__item-name">Item Name</label>
+        <input 
+          v-model="store.itemName"
+          required
+          name="pc__item-name"
+        />
+        <label for="pc__item-number">Number of Items</label>
+        <input 
+          type="number"
+          v-model.number="store.numberOfItems"
+          required
+          name="pc__item-number"
+        />
+        <label for="pc__item-category">Item Category</label>
+        <select
+          v-model="store.itemCategory"
+          required
+          name="pc__item-category"
+        >
+          <option v-for="category in store.categoryList">{{ category }}</option>
+        </select>
+      </form>
     </div>
     <div v-else class="pack-calculator__content">
       <h1 class="pack-calculator__title">PACK<br>CALCULATOR</h1>
@@ -72,6 +95,12 @@ useHead({
       text-align: right;
       width: 100%;
     }
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
   }
 }
 
