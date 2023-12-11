@@ -22,7 +22,14 @@ useHead({
   <div class="pack-calculator__container">
     <div v-if="store.enabled">
       <h1 class="pack-calculator__title">PACK<br>CALCULATOR</h1>
-      <form class="pack-calculator__form-container">
+      <ul>
+        <li v-for="item in store.itemsList">
+          {{  item.number }}
+          {{  item.name }}
+          {{  item.category }}
+        </li>
+      </ul>
+      <form class="pack-calculator__form-container" v-on:submit="store.addItem">
         <label for="pc__item-name">Item Name</label>
         <input 
           v-model="store.itemName"
@@ -44,6 +51,9 @@ useHead({
         >
           <option v-for="category in store.categoryList">{{ category }}</option>
         </select>
+        <button>
+          Submit
+        </button>
       </form>
     </div>
     <div v-else class="pack-calculator__content">
