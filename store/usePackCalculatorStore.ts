@@ -7,6 +7,7 @@ export const usePackCalculatorStore = defineStore('packCalculator', {
     categoryList: ['Big Three','Clothing','Cooking','Hydration','Luxury','Misc.','Sleep','Worn Weight'],
     itemName: '',
     itemCategory: '',
+    itemWeight: 0,
     numberOfItems: 0,
   }),
   actions: {
@@ -16,7 +17,8 @@ export const usePackCalculatorStore = defineStore('packCalculator', {
       this.itemsList.push({
         "name": this.itemName,
         "number": this.numberOfItems,
-        "category": this.itemCategory
+        "category": this.itemCategory,
+        "weight": this.itemWeight,
       })
     }
   },
@@ -27,5 +29,6 @@ export const usePackCalculatorStore = defineStore('packCalculator', {
 interface Item {
   name: string,
   number: number,
-  category: string
+  category: string,
+  weight: number,
 }
