@@ -23,9 +23,8 @@
     <section class="hero__right">
       <h2 class="hero__right-subheader">software engineer<br>graphic designer<br>thru-hiker</h2>
       <div class="hero__app-links-container">
-        <p class="hero__app-links-subheader">apps<br>for hikers:</p>
+        <p class="hero__app-links-subheader">app<br>for hikers:</p>
         <NuxtLink class="hero__app-link" to="/resupply-calculator">RESUPPLY CALCULATOR</NuxtLink>
-        <NuxtLink class="hero__app-link" to="/pack-calculator">PACK CALCULATOR</NuxtLink>
       </div>
     </section>
   </section>
