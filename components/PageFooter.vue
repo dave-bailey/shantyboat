@@ -1,6 +1,10 @@
 <template>
-    <div class="footer">Copyright © 2023: Dave Bailey - All Rights Reserved</div>
+    <div class="footer">Copyright © {{ currentYear }}: Dave Bailey - All Rights Reserved</div>
 </template>
+
+<script setup>
+  const currentYear = new Date().getFullYear()
+</script>
 
 <style lang="scss" scoped>
 .footer {
