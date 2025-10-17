@@ -24,7 +24,7 @@ export const adventureData = [
     title: "Fira to Oia",
     description: "December 2024",
     titleImg: "fira",
-    subheader: "6 Miles of Santorini: on Christmas Day",
+    subheader: "6 Miles of Santorini: A Volcano Walk on Christmas Day",
     copy: "By far the shortest hike I’m listing among my grand adventures, but as soon as I learned about the trail from Fira to Oia, I knew it was a must.<br><br>The beauty of Santorini is obvious: whitewashed villages, dramatic cliffs, and the deep blue of the Aegean all around you. Hiking this little trail on Christmas Day gave us a rare kind of peace. With the crowds gone for the season, we had the path almost entirely to ourselves, and the island felt even more magical.<br><br>It may have only taken a few hours, but the memory of walking between two iconic towns, with the sea below and bells ringing in the distance, is one I’ll always carry with me. A short hike, but a special one."
   },
     {
