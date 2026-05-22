@@ -8,7 +8,7 @@ import { adventureData } from '~/assets/adventureData';
     <section class="home-page__grand-adventures">
       <h3 class="home-page__grand-adventures-title">GRAND<br>ADVENTURES</h3>
       <ul >
-        <li v-for="item in adventureData">        
+        <li v-for="item in adventureData" :key="item.title">        
           <home-adventure 
             :title="item.title"
             :description="item.description"
