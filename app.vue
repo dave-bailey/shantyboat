@@ -16,7 +16,9 @@ useHead({
 
 <template>
   <div class="app">
-    <NuxtPage />
+    <main>
+      <NuxtPage />
+    </main>
   </div>
 </template>
 
