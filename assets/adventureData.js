@@ -1,5 +1,12 @@
 export const adventureData = [
   {
+    title: "Sentiero Azzurro",
+    description: "February 2026",
+    titleImg: "blue_path",
+    subheader: "7.5 miles on the Blue Path",
+    copy: "The Sentiero Azzurro, or Blue Path, is a scenic coastal hike along the Italian Riviera connecting the five iconic villages of Cinque Terre. Winding between colorful cliffside towns, terraced hillsides, and sweeping Mediterranean views, it made for an incredible February day spent hiking under sunny skies.<br/><br/>We hiked the trail from Monterosso al Mare to Riomaggiore as part of our larger trip through Milan, Pisa, and Florence, and it fit perfectly into our winter travels.<br/><br/>The day started with breakfast at a small café in Monterosso before setting out along the coast. There’s something especially magical about off-season beach towns. Quiet trails, peaceful viewpoints, and the simple novelty of feeling the sun while surrounded by the sea in the middle of winter.<br/><br/>The trail carried us through steep vineyard terraces, dramatic coastal overlooks, and one postcard-perfect village after another. The colorful buildings perched above the water felt almost unreal, and the brilliant blue Mediterranean was impossible to stop staring at. Lunch in Corniglia was a highlight, the kind of trail stop that reminds us how much better hiking can be when incredible food is part of the experience.<br/><br/>While it was far from a true thru-hike, the Sentiero Azzurro was exactly the kind of adventure we love finding while traveling: a short but rewarding day on foot that let us experience a place more deeply than simply passing through.<br/><br/>Between the beautiful water, amazing food, striking terraces, and the charm of the five villages, it became one of the standout memories of our time in Italy."
+  },
+  {
     title: "Lofoten Long Crossing",
     description: "August 2025",
     titleImg: "lofoten",
